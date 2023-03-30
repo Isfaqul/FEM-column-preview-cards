@@ -1,0 +1,124 @@
+:root {
+  --card1-bg: #e28725;
+  --card2-bg: #006970;
+  --card3-bg: #004241;
+  --white: #fff;
+  --txt-para: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  padding: 2em;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card-container {
+  border-radius: 0.6em;
+  /* overflow: hidden; */
+}
+
+img {
+  display: block;
+  margin-bottom: 4em;
+  width: 64px;
+}
+
+.inner-cards {
+  padding: 4.7em 4.9em;
+}
+
+.inner-card-1 {
+  background-color: var(--card1-bg);
+  color: var(--card1-bg);
+  border-radius: 0.6em 0 0 0.6em;
+}
+
+.inner-card-2 {
+  background-color: var(--card2-bg);
+  color: var(--card2-bg);
+}
+
+.inner-card-3 {
+  background-color: var(--card3-bg);
+  color: var(--card3-bg);
+  border-radius: 0 0.6em 0.6em 0;
+}
+
+.inner-card-title {
+  letter-spacing: 0.2rem;
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4rem;
+  color: var(--white);
+  margin-bottom: 0.625em;
+}
+
+.inner-card-description {
+  color: var(--txt-para);
+  font-size: 1.5rem;
+  margin-bottom: 1.8em;
+  line-height: 165%;
+}
+
+.btn-learn-more {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--white);
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1em;
+  width: 146px;
+  border-radius: 2.4em;
+  border: 2px solid transparent;
+  /* transition: all 100ms ease-in-out; */
+}
+
+.btn-learn-more:hover {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-learn-more:active {
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 1024px) {
+  .main-card-container {
+    display: flex;
+    max-width: 920px;
+  }
+  .inner-card-description {
+    margin-bottom: 5em;
+  }
+  .inner-cards {
+    transition: all 200ms ease-in-out;
+  }
+  .inner-cards:hover {
+    position: relative;
+    transform: scale(105%);
+    box-shadow: 0px 2px 50px -15px rgba(42, 42, 42, 0.8);
+  }
+} ;
